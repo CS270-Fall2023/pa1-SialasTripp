@@ -21,9 +21,7 @@ int main()
     char str[256];
     int numberOfTokens = 0;
     printf("Please, enter the string: ");
-    // scanf("%[^\n]%*c", str);
     fgets(str, 256,stdin);
-    
     numberOfTokens = getTokens(str, &arrayOfTokens);
     printf("Number of tokens: %d\n", numberOfTokens);
     for (int i = 0; i <= numberOfTokens; i++)
