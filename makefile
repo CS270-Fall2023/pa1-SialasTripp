@@ -6,10 +6,10 @@ clean:
 	rm -f functions *.o
 
 functions: main.o functions.o functions.h
-	$(CC) $(CFLAGS) main.o functions.o -o functions
+	$(CC) $(CFLAGS) $< functions.o -o $@
 
 main.o: main.c functions.h
-	$(CC) $(CFLAGS) -c main.c
+	$(CC) $(CFLAGS) -c $<
 
 functions.o: functions.c functions.h
-	$(CC) $(CFLAGS) -c functions.c
+	$(CC) $(CFLAGS) -c $<
